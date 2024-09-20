@@ -1,115 +1,109 @@
+/* General page styles */
 body {
-    font-family: 'Raleway', serif;
+  font-family: 'Arial', sans-serif;
   text-align: center;
-  background-color: #f0f0f0;
-  margin: 0;
-  padding: 0;
+  background-color: #f7f7f7;
+  padding: 20px;
 }
 
 h1 {
   color: #333;
+  margin-bottom: 20px;
 }
 
-#cardForm {
-  margin: 20px auto;
-  max-width: 400px;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+form {
+  display: inline-block;
+  margin-bottom: 30px;
 }
 
-label,
-input {
+label {
   display: block;
-  margin-bottom: 10px;
+  margin: 10px 0 5px;
+}
+
+input {
+  padding: 10px;
+  margin-bottom: 15px;
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
 }
 
 button {
-  background-color: #0074e4;
-  color: #fff;
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
   border: none;
   border-radius: 5px;
-  padding: 10px 20px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  font-size: 16px;
 }
 
 button:hover {
-  background-color: #0056a7;
+  background-color: #218838;
 }
 
-/* Certificate Modal */
-
+/* Modal styles */
 .modal {
-    max-width: 800px;
-    margin: 0 auto; /* Center horizontally */
-    position: fixed;
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Center both vertically and horizontally */
-    z-index: 1;
-  }
-  
-  .modal-content {
-    background-color: #fff;
-    padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    position: relative;
-    border: 3px solid #659f8f;
-  }
-  
-
-.modal-content::before {
-  content: "";
-  position: absolute;
-  top: -2px; right: -2px; bottom: -2px; left: -2px;
-  z-index: -1;
-  background: linear-gradient(#659f8f, #5d5f5e);
-  border-radius: 15px;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
 }
 
-.modal-content::after {
-  content: "";
-  position: absolute;
-  top: -1px; right: -1px; bottom: -1px; left: -1px;
-  z-index: -2;
-  background: #fff;
-  border: 1px solid #dc7f5f;
-  border-radius: 15px;
-}
-
-#certificateContent {
-  font-family: 'Raleway', serif;
-  color: #333;
+.modal-content {
+  background-color: white;
   padding: 20px;
-  background-color: #f9f9f9;
-  border: 2px solid #dc7f5f;
   border-radius: 10px;
-  margin: 20px 0;
-}
-
-h1, .modal-content h2, .modal-content p {
-  color: #5d5f5e;
+  max-width: 600px;
+  margin: auto;
+  position: relative;
 }
 
 .close {
-  color: #dc7f5f;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 24px;
+  color: #888;
+  cursor: pointer;
 }
 
-/* Adding a fancy border to the certificate content */
+.close:hover {
+  color: #333;
+}
+
+/* Certificate styles */
 #certificateContent {
-  background: #f9f9f9 url('path/to/your/decorative-border-image.png') center/contain no-repeat;
+  text-align: center;
 }
 
-/* Adjust button styles to fit the theme */
-button {
-  background-color: #659f8f;
-  color: #fff;
+#certificateContent h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
 }
 
-button:hover {
-  background-color: #5d5f5e;
+#certificateContent h3 {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+#certificateContent p {
+  font-size: 16px;
+}
+
+/* CODESPACE logo */
+.certificate-logo {
+  max-width: 300px;
+  margin: 20px auto;
+  display: block;
 }
 
