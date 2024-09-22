@@ -1,9 +1,22 @@
-/* General page styles */
 body {
   font-family: 'Arial', sans-serif;
-  text-align: center;
-  background-color: #f7f7f7;
-  padding: 20px;
+  background-color: #e0e0e0; /* Subtle grey background for the base */
+  padding: 40px; /* More padding for a spacious feel */
+}
+
+/* Certificate container */
+.certificate-wrapper {
+  background-color: white; /* The base "page" background */
+  padding: 40px;
+  border-radius: 25px;
+  max-width: 700px;
+  margin: 0 auto;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* Enhanced shadow for depth */
+  border: 6px solid #FF6F61; /* Stylish border around the base */
+  position: relative;
+  background-image: radial-gradient(circle, #f9f9f9 20%, transparent 20%), radial-gradient(circle, transparent 20%, #f9f9f9 20%);
+  background-size: 30px 30px;
+  background-position: 0 0, 15px 15px; /* Pattern for added style */
 }
 
 h1 {
@@ -14,11 +27,6 @@ h1 {
 form {
   display: inline-block;
   margin-bottom: 30px;
-}
-
-label {
-  display: block;
-  margin: 10px 0 5px;
 }
 
 input {
@@ -82,28 +90,59 @@ button:hover {
 }
 
 /* Certificate styles */
-#certificateContent {
+.certificate {
   text-align: center;
+  background-color: white;
+  border-radius: 20px;
+  padding: 30px;
+  max-width: 650px;
+  margin: 20px auto;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  position: relative;
+  border: 4px solid #FF6F61; /* Primary border color */
+  background: linear-gradient(white, #f9f9f9); /* Subtle gradient background */
 }
 
-#certificateContent h2 {
+.certificate:before, .certificate:after {
+  content: '';
+  position: absolute;
+  height: 15px;
+  width: 80%;
+  background-color: #FF6F61;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50px;
+}
+
+.certificate:before {
+  top: -15px;
+}
+
+.certificate:after {
+  bottom: -15px;
+}
+
+.certificate-logo {
+  margin: 20px 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 150px;
+}
+
+.certificate h2 {
   font-size: 24px;
   margin-bottom: 10px;
+  color: #FF6F61; /* Matching the border color */
 }
 
-#certificateContent h3 {
+.certificate h3 {
   font-size: 20px;
   margin: 10px 0;
+  color: #333;
 }
 
-#certificateContent p {
+.certificate p {
   font-size: 16px;
+  color: #666;
 }
-
-/* CODESPACE logo */
-.certificate-logo {
-  max-width: 300px;
-  margin: 20px auto;
-  display: block;
-}
-
